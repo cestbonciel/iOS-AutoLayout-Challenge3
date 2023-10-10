@@ -14,6 +14,7 @@
 		2754452C2ABA7ADC00054BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2754452B2ABA7ADC00054BFD /* Assets.xcassets */; };
 		2754452F2ABA7ADC00054BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2754452D2ABA7ADC00054BFD /* LaunchScreen.storyboard */; };
 		8713F0662AD1AA8C004864CB /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8713F0652AD1AA8C004864CB /* AnchorViewController.swift */; };
+		87F744F52AD5245300AC5C4C /* ConstraintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F744F42AD5245300AC5C4C /* ConstraintsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2754452E2ABA7ADC00054BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		275445302ABA7ADC00054BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8713F0652AD1AA8C004864CB /* AnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
+		87F744F42AD5245300AC5C4C /* ConstraintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				275445222ABA7ADC00054BFD /* AppDelegate.swift */,
 				275445242ABA7ADC00054BFD /* SceneDelegate.swift */,
 				8713F0652AD1AA8C004864CB /* AnchorViewController.swift */,
+				87F744F42AD5245300AC5C4C /* ConstraintsViewController.swift */,
 				275445262ABA7ADC00054BFD /* ViewController.swift */,
 				275445282ABA7ADC00054BFD /* Main.storyboard */,
 				2754452B2ABA7ADC00054BFD /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				275445232ABA7ADC00054BFD /* AppDelegate.swift in Sources */,
 				275445252ABA7ADC00054BFD /* SceneDelegate.swift in Sources */,
 				8713F0662AD1AA8C004864CB /* AnchorViewController.swift in Sources */,
+				87F744F52AD5245300AC5C4C /* ConstraintsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
