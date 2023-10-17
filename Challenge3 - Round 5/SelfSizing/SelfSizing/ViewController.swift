@@ -25,16 +25,20 @@ extension ViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		cell.textLabel?.text = indexPath.description
-		cell.detailTextLabel?.text = """
+		
+		guard let customCell = cell as? CustomTableViewCell else {
+			return cell
+		}
+		customCell.titleLabel?.text = indexPath.description
+		customCell.postLabel?.text = """
 		 Lorem ipsum dolor sit er elit lamet,
 		 consectetaur cillium adipisicing pecu,
 		 sed do eiusmod tempor incididunt ut labore
 		 et dolore magna aliqua.
 		"""
-		cell.detailTextLabel?.numberOfLines = 0
-		cell.detailTextLabel?.textAlignment = .right
-		cell.imageView?.image = UIImage(named: "\(indexPath.row % 3)")
+		
+		
+		customCell.cellImageView?.image = UIImage(named: "\(indexPath.row % 3)")
 		return cell
 	}
 }
