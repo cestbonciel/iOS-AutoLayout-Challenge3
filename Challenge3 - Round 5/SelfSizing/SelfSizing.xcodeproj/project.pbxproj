@@ -61,11 +61,11 @@
 				8795AAB22ADE98580041466C /* AppDelegate.swift */,
 				8795AAB42ADE98580041466C /* SceneDelegate.swift */,
 				8795AAB62ADE98580041466C /* ViewController.swift */,
+				8795AAC62ADE9E610041466C /* CustomTableViewCell.swift */,
 				8795AAB82ADE98580041466C /* Main.storyboard */,
 				8795AABB2ADE98590041466C /* Assets.xcassets */,
 				8795AABD2ADE98590041466C /* LaunchScreen.storyboard */,
 				8795AAC02ADE98590041466C /* Info.plist */,
-				8795AAC62ADE9E610041466C /* CustomTableViewCell.swift */,
 			);
 			path = SelfSizing;
 			sourceTree = "<group>";

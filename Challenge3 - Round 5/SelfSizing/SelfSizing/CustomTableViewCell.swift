@@ -13,6 +13,8 @@ class CustomTableViewCell: UITableViewCell {
 	var titleLabel: UILabel!
 	var postLabel: UILabel!
 	
+	private var postHeight: NSLayoutConstraint!
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		cellImageView = UIImageView()
@@ -31,6 +33,8 @@ class CustomTableViewCell: UITableViewCell {
 		postLabel.textColor = .darkGray
 		postLabel.numberOfLines = 0
 		
+		postHeight = postLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 50)
+		
 		let stackView = UIStackView(arrangedSubviews: [titleLabel, postLabel])
 		stackView.alignment = .fill
 		stackView.distribution = .fill
@@ -48,8 +52,25 @@ class CustomTableViewCell: UITableViewCell {
 			stackView.leadingAnchor.constraint(equalTo: cellImageView.trailingAnchor, constant: 8),
 			stackView.topAnchor.constraint(equalTo:cellImageView.topAnchor),
 			stackView.trailingAnchor.constraint(equalTo:contentView.trailingAnchor),
-			stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+			stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+			postHeight
 		])
+		
+		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(togglePost))
+		
+		postLabel.addGestureRecognizer(tapGesture)
+		postLabel.isUserInteractionEnabled = true
+	}
+	
+	@objc private func togglePost() {
+		
+		guard let height = postHeight else {
+			return
+		}
+		
+		height.isActive = !height.isActive
+		
+		NotificationCenter.default.post(name: NSNotification.Name("layoutCell"), object: nil)
 	}
 	
 	override func setSelected(_ selected: Bool, animated: Bool) {
